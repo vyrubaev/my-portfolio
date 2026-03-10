@@ -43,8 +43,9 @@ const renderBookmarks = (category) => {
   const data=getBookmarks();
   const bookmarksCat = data.filter((item) => item.category===category);
   bookmarksCat.forEach((item) => {
-    catList.innerHTML += `
-    <input id="${item.name}" type="radio" value="${item.name}" name="radio-btn"><label for="${item.name}"><a href="${item.url}" target="_blank">${item.name}</a></label>`});
+    catList.innerHTML += `<div class="bookmark-item">
+    <input id="${item.name}" type="radio" value="${item.name}" name="radio-btn"><label for="${item.name}"><a href="${item.url}" target="_blank">${item.name}</a></label></div>`
+  });
 };
 
 addBookmarkBtn.addEventListener("click", () => {

@@ -1,0 +1,111 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --accent: #ff9f43;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top right, #1e3799, #0c2461); /* Глубокий ночной градиент */
+  color: white;
+}
+
+#container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 40px;
+  width: 380px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#result {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* СТИЛЬ КОМПАСА */
+#compass-container {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#compass {
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  background: rgba(255,255,255,0.05);
+}
+
+#arrow {
+  width: 4px;
+  height: 30px;
+  background: linear-gradient(to bottom, #ff4757 50%, white 50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -15px;
+  border-radius: 2px;
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Плавная анимация поворота */
+  transform: rotate(0deg);
+}
+
+/* ТЕМПЕРАТУРА И ТЕКСТ */
+#main-temperature {
+  font-size: 1.3rem !important;
+  font-weight: 800;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#location {
+  font-size: 1.2rem !important;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* КНОПКА И СЕЛЕКТ */
+select, button {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+select {
+  background: rgba(255,255,255,0.9);
+  padding: 0 15px;
+}
+
+button {
+  margin-top: 15px;
+  background: var(--accent);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255, 159, 67, 0.3);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: #ffaf5e;
+  box-shadow: 0 15px 25px rgba(255, 159, 67, 0.4);
+}

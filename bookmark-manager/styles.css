@@ -100,3 +100,20 @@ section {
   width: fit-content;
   border-radius: 10px;
 }
+.bookmark-item {
+  display: flex; /* Выстраиваем элементы внутри в ряд */
+  flex-direction: row; /* Направление — строка */
+  align-items: center; /* Центрируем по вертикали */
+  justify-content: flex-start; /* Прижимаем к левому краю */
+  padding: 5px 15px; /* Уменьшаем отступы, чтобы не было гигантских дыр */
+  width: 100%;
+}
+
+.bookmark-item input {
+  margin-right: 10px; /* Отступ между точкой и текстом */
+}
+
+/* Сбросим общие стили div для элементов списка, чтобы они не наследовались криво */
+#category-list .bookmark-item {
+  padding: 10px; 
+}
