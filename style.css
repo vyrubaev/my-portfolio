@@ -78,3 +78,49 @@ header {
     background: #9ca3af;
     cursor: not-allowed;
 }
+footer {
+    margin-top: 80px;
+    padding: 40px 0;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #4b5563;
+    font-size: 1.5rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--primary); /* Синий цвет из ваших переменных */
+    transform: translateY(-3px);
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
