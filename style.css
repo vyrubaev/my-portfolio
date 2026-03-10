@@ -38,6 +38,42 @@ header {
     display: flex;
     flex-direction: column;
 }
+/* 1. Сетка для карточек */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 2. Сама карточка */
+.project-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden; /* Чтобы картинка не вылезала за скругленные углы */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. ИСПРАВЛЕНИЕ ВЫСОТЫ КАРТИНОК */
+.project-card img {
+  width: 100%;
+  height: 250px;       /* Фиксированная высота для всех */
+  object-fit: cover;    /* Обрезает края, сохраняя пропорции (не сплющивает) */
+  object-position: top; /* Всегда показывает верхнюю часть сайта */
+  border-bottom: 2px solid var(--light-grey);
+}
+
+/* 4. Контейнер с текстом под картинкой */
+.project-info {
+  padding: 20px;
+  flex-grow: 1; /* Растягивает блок, чтобы кнопки всегда были внизу */
+  display: flex;
+  flex-direction: column;
+}
 
 .project-card:hover {
     transform: translateY(-5px);
