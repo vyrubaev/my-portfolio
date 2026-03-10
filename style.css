@@ -29,6 +29,7 @@ header {
 }
 
 .project-card {
+    position: relative;
     background: var(--card-bg);
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -45,6 +46,15 @@ header {
 
 .project-info {
     padding: 20px;
+}
+.stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Растягивает область клика на всю карточку */
 }
 
 .tags {
